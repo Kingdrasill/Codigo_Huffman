@@ -54,6 +54,19 @@
   <p align="center">
     <img src="imgs/normalizeRP.png">
   </p>
+  Depois do método 'normalizeRP' o método chamado é o 'createWordRank' nele se é passado um ponteiro de uma lista de Record e o ponteiro do Doumento. Este método pega cada Word no Documento e cria um Record com as informações de Word, o RP é modificado um pouco para tentar não haver RPs iguais. Após Record é criado ele é adiconado na lista de Record passada, nesta lista quando um dado é adicionado ele já é ordenado com ordem sendo em ordem de RP crescente, se algum RP for igual a ordem destes iguas vai ser decrescente com tamanho da palavra, se o tamanho e o RP for igual o valor ASCII é usado para colocar os dados em ordem crescente, e se RP, tamanho e valor forem iguais ele apenas é colocado na frente do elemento onde todos forem iguais.
+  <p align="center">
+    <img src="imgs/createWordRank.png">
+  </p>
+  Depois do método 'createWordRank' tem se o método 'createListNos' que recebe os ponteiros de duas listas uma de Record e uma de ponteiro de Tree. Este método faz a mesma coisa que o anterior sendo isto ele pega um Record e cria um Tree com ele, adicionando o ponteiro deste Tree sempre no final da lista de ponteiro de Tree, pois os dados já estão ordenados.
+  <br><br>
+  Depois do método 'createListNos' vem o método 'createHuffmanTree' que recebe o ponteiro para lista de ponteiro de Tree para criar a árvore de Huffman. Este método ficara rodando até que só tem um elemento na lista, sendo ele a árvore completa, repetindo os seguintes passos: se pega e remove os dois primeiro Tree da lista, eles são pegos usando o método 'dequeueListNos', e os manda para o método 'insertHuffmanForest' junto com a lista. No método 'insertHuffmanForest' o seguinte processo acontece, primeiro um novo Tree é criado com seu 'reg' tendo os dados a seguir palavra sendo ' ', o RP, lenght, e value sendo a soma dos mesmos dados dos dois Tree passados para o método. Depois é se colocado no ponteiro 'esq' do novo Tree o Tree passado que tiver o maior RP e no ponteiro 'dir' o Tree com menor RP, se os RP forem iguais o tamanho é utilizado e se os tamanhos forem iguias o valor ASCII é usado. Após isto este novo Tree é inserido na lista seguindo a mesma lógica de 'createWordRank', ordem de RP crecente e se RP igual ordem de lenght e valor ASCII decrescente. As imagens abaixo mostram os métodos 'createHuffmanTree' e 'insertHuffmanForest'.
+  <p align="center">
+    <img src="imgs/createHuffmanTree.png">
+  </p>
+  <p align="center">
+    <img src="imgs/insertHuffmanForest.png">
+  </p>
 </p>
 
 # Compilação e Execução
