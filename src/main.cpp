@@ -5,31 +5,24 @@ void metodo2();
 
 int main(){ 
 	int option;
-	while(true) {
-		std::cout << "\nEscolha uma das opcoes abaixo:" << std::endl;
-		std::cout << "\n1 - Compactar texto" << std::endl;
-		std::cout << "2 - Descompactar arquivo" << std::endl;
-		std::cout << "3 - Sair" << std::endl;
-		std::cout << "\nOpcao: ";
-		std::cin >> option;
+	std::cout << "\nEscolha uma das opcoes abaixo:" << std::endl;
+	std::cout << "\n1 - Compactar texto" << std::endl;
+	std::cout << "2 - Descompactar arquivo" << std::endl;
+	std::cout << "\nOpcao: ";
+	std::cin >> option;
 
-		switch (option) {
-			case 1:
-				metodo1();
-				break;
-			
-			case 2:
-				metodo2();
-				break;
-
-			case 3:
-				exit(0);
-				break;
-
-			default:
-				std::cout << "\nOpcao Invalida!" << std::endl;
-				break;
-		}
+	switch (option) {
+		case 1:
+			metodo1();
+			break;
+		
+		case 2:
+			metodo2();
+			break;
+		
+		default:
+			std::cout << "\nOpcao Invalida!" << std::endl;
+			break;
 	}
 
 	return 0;
@@ -41,9 +34,12 @@ void metodo1() {
 	std::deque<bool> b;
 	List<Record> rank;
 	List<Tree*> Nos;
-	std::string nome = "ti.txt";
+	std::string nome;
 	FLVazia(&rank);
 	FLVazia(&Nos);
+
+	std::cout << "\nQual o nome do arquivo onde o texto esta: ";
+	std::cin >> nome;
 
 	pegarDocumento(&Doc, nome);
 	normalizeRP(&Doc);
@@ -58,6 +54,7 @@ void metodo1() {
 	identificadores(&t, b, &Doc);
 	compressFile(&Doc, nome);
 	createTreeFile(t);
+	delete t;
 }
 
 void metodo2() {
@@ -67,4 +64,5 @@ void metodo2() {
 	makeHuffmanTree(&arvores, &t);
 	t->reg.max_size = altura(t);
 	decompressFile(t);
+	delete t;
 }
