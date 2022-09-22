@@ -79,7 +79,10 @@
   <p align="center">
     <img src="imgs/compressFile.png">
   </p>
-  E o último método chamdo é o 'createTreeFile'
+  E o último método chamdo é o 'createTreeFile' que é passado a árvore de Huffman para guardar ela num arquivo para o texto poder ser descompactado. Nele é primeiro criado um deque com a raiz da árvore, isto serve para andar em largura, pedido o nome do arquivo onde a árvore vai ser salva, depois o arquivo é aberto e com isto é começado o seguinte processo é repetido até que o deque fique vazio: primeiro pega e remove o primeiro elemento do deque, depois com o elemento é escrito no arquivo em linhas diferentes os dados de bits e a palavra do elemento, isto não é feito para raiz, depois é se adicionado os filhos esquerdo e direito do elemento no deque. A imagem abaixo mostra este método.  
+  <p align="center">
+    <img src="imgs/createTreeFile.png">
+  </p>
 </p>
 
 # Compilação e Execução
