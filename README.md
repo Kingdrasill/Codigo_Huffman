@@ -46,7 +46,7 @@
   <p align="center">
     <img src="imgs/pegarDocumento.png">
   </p>
-  Depois do método 'pegarDocumento' o método 'normalizeRP' é chamado nele é se passado o ponteiro do Documento criado no método anterior. Antes de explicar este método 
+  Depois do método 'pegarDocumento' o método 'normalizeRP' é chamado nele é se passado o ponteiro do Documento criado no método anterior. Antes de explicar este método dois outros métodos são importantes que são 'findMaxRP' e 'findMinRP' que buscam o maior e menor RP respectivamente no Documento passado. O método 'normalizeRP' pega cada Word no Documento passado e atualiza o RP dela para ser igual a ele mesmo divido pelo maior menos o menor RP, pegos pelos métods descritos antes. As imagens abaixo ilustram estes métodos. 
   <p align="center">
     <img src="imgs/findMaxRP.png">
     <img src="imgs/findMinRP.png">
