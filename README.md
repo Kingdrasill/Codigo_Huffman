@@ -46,6 +46,14 @@
   <p align="center">
     <img src="imgs/pegarDocumento.png">
   </p>
+  Depois do método 'pegarDocumento' o método 'normalizeRP' é chamado nele é se passado o ponteiro do Documento criado no método anterior. Antes de explicar este método 
+  <p align="center">
+    <img src="imgs/findMaxRP.png">
+    <img src="imgs/findMinRP.png">
+  </p>
+  <p align="center">
+    <img src="imgs/normalizeRP.png">
+  </p>
 </p>
 
 # Compilação e Execução
