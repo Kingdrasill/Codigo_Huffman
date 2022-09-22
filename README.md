@@ -75,6 +75,11 @@
   <p align="center">
     <img src="imgs/identificadores.png">
   </p>
+  Depois é chamado 'compressFile' que é passado o ponteiro do Documento e o nome do arquivo do texto que vai ser compactado, para o texto ser compactado a árvore de Huffman tem que ter no máximo 16 de altura. Neste método primeiro é se perguntado qual vai ser o nome do arquivo binário onde o texto vai ser compactado, depois abri-se os arquivos dois arquivos, o passado para método e o que vai ser o compactado o texto, depois de abertos é pego uma palavra do texto usando a mesma lógica do método 'pegarDocumento', a mesma é procurada em Documento se for achada se retorna o Word onde ela esta com ele é se utilizado o ponteiro de Tree para pegar o array de bool na árvore de Huffman da palavra, como arquivos binários trabalham com char e não bools o array de bool são convertidos para dois char, ai está o motivo de ser no máximo altura 16, e por último os chars são adicionados no arquivo binário, isto é feito para toas palavras no texto. A imagem abaixo ilustra este método.
+  <p align="center">
+    <img src="imgs/compressFile.png">
+  </p>
+  E o último método chamdo é o 'createTreeFile'
 </p>
 
 # Compilação e Execução
