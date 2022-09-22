@@ -67,6 +67,10 @@
   <p align="center">
     <img src="imgs/insertHuffmanForest.png">
   </p>
+  Depois do método 'creataHuffmanTree' o único dado na lista de ponteiro de Tree vai ser a árvore de Huffman, ela é removida da lista e armazenada, deposi é usado o método 'altura' para setar o dado max_size do 'reg' da raiz da árvore. A imagem ilustra o método recursivo 'altura'.
+  <p align="center">
+    <img src="imgs/altura.png">
+  </p>
 </p>
 
 # Compilação e Execução
