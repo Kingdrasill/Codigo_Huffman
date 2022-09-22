@@ -85,6 +85,24 @@
   </p>
 </p>
 
+# Descompactar um arquivo
+
+<p align="justify">
+  A segunda opção que pode ser selecionada pelo usuário ao rodar o programa é a 2 - Descompactar um arquivo. Nela a primeira coisa feita é uma lista de ponteiros de Tree, depois com a lista é criado a árvore de Huffman, depois pego a altura dela e depois o arquivo desejado pelo usuário é descompactado.
+  <p align="center">
+    <img src="imgs/descompacta.png">
+  </p>
+  <p align="center">
+    <img src="imgs/getTreeFromFile.png">
+  </p>
+  <p align="center">
+    <img src="imgs/makeHuffmanTree.png">
+  </p>
+  <p align="center">
+    <img src="imgs/decompressFile.png">
+  </p>
+</p>
+
 # Compilação e Execução
 
 O código disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
