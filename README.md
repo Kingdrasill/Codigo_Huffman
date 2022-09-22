@@ -67,9 +67,13 @@
   <p align="center">
     <img src="imgs/insertHuffmanForest.png">
   </p>
-  Depois do método 'creataHuffmanTree' o único dado na lista de ponteiro de Tree vai ser a árvore de Huffman, ela é removida da lista e armazenada, deposi é usado o método 'altura' para setar o dado max_size do 'reg' da raiz da árvore. A imagem ilustra o método recursivo 'altura'.
+  Depois do método 'creataHuffmanTree' o único dado na lista de ponteiro de Tree vai ser a árvore de Huffman, ela é removida da lista e armazenada, depois é usado o método 'altura' para setar o dado max_size do 'reg' da raiz da árvore, no método 'altura' é passado a raiz da árvore. A imagem ilustra o método recursivo 'altura'.
   <p align="center">
     <img src="imgs/altura.png">
+  </p>
+  Depois é chamado 'identificadores' que é passado a raiz da árvore, um deque de bool vazio e o ponteiro do Doumento criado anteriormente. Este método é um recursivo que serve para setar a altura de todos os nós da árvore passada e em todos nós, menos a raiz, vão atualizar no dado 'reg' o valor de bits para ser igual ao deck passado. Nos nós em que a palavra é diferente de ' ' a palavra vai ser procurada no Documento e se achar o dado 't' do Word onde ela foi salva vai receber o ponteiro para o nó da árvore que está palavra está. Depois que os dados do nó forem atualizados o método é chamado para o filho esquerdo e diretiro, só que o deck do esquerdo vai ter um bool false extra no final e no deck do direito um bool true no final. A imagem abaixo ilustra o método recursivo.
+  <p align="center">
+    <img src="imgs/identificadores.png">
   </p>
 </p>
 
