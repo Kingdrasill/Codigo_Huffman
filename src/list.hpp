@@ -1,22 +1,19 @@
 #ifndef LIST_HPP
 #define LIST_HPP
 
-// Estrutura para criar uma corrente de palavras
 template <typename T>
 struct Block{
-    T dado;      // Dados da palavra
-    Block<T> *prox;    // Ponteiro para próxima palavra
+    T dado;   
+    Block<T> *prox;   
 };
 
-// Estrutura que armazena a cabeça e a cauda da corrente de palavras
 template <typename T>
 struct List{
-    Block<T>* cabeca;  // Início da corrente
-    Block<T>* cauda;   // Fim da corrente
-    int qtd;           // Quantidade de elementos
+    Block<T>* cabeca;  
+    Block<T>* cauda;  
+    int qtd;         
 };
 
-// Esvazia uma lista de palavras
 template <typename T>
 void FLVazia(List<T> *lista){
     lista->cabeca = new Block<T>;
