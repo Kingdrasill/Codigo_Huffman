@@ -88,20 +88,25 @@
 # Descompactar um arquivo
 
 <p align="justify">
-  A segunda opção que pode ser selecionada pelo usuário ao rodar o programa é a 2 - Descompactar um arquivo. Nela a primeira coisa feita é uma lista de ponteiros de Tree, depois com a lista é criado a árvore de Huffman, depois pego a altura dela e depois o arquivo desejado pelo usuário é descompactado.
+  A segunda opção que pode ser selecionada pelo usuário ao rodar o programa é a 2 - Descompactar um arquivo. Nela a primeira coisa feita é um deque de ponteiros de Tree, depois com a lista é criado a árvore de Huffman, depois pego a altura dela e depois o arquivo desejado pelo usuário é descompactado.
   <p align="center">
     <img src="imgs/descompacta.png">
   </p>
+  O primeiro método chamado é o 'getTreeFromFile' é passado para ele um ponteiro de deque de Tree. Nele primeiro é perguntado o nome do arquivo onde a árvore está salva, depois um Tree vazio é criado e inserido no deque, ele é a raiz da árvore de Huffman, depois o arquivo é aberto com ele aberto é se repetido as seguintes operações até não ter mais informações no arquivo, neste loop os dados em duas linhas do arquivo são armazenados em sbits e palavra: primeiro é pego o tamanho de sbits depois a string sbtis é transformada em um array de bool bits, depois é criado um Tree novo e os dados bits e palavras são colocado no mesmo, e por último o ponteiro para o novo Tree é colocado no deque.  
   <p align="center">
     <img src="imgs/getTreeFromFile.png">
   </p>
+  O próximo método chamado é o 'makeHuffmanTree' que passado o ponteiro do deque de ponteiros de Tree e um ponteiro de Tree. Nele primeiro o ponteiro de Tree recebe o primeiro elemento do deque e o mesmo é removido, depois vais e repetir os processos a seguir até que o deque fique vazio: pega e remove o primeiro dado de deque, depois anda-se em no Tree do ponteiro passado com o bits do dado peguo, e por último o dado é salvo no nó onde parou de andar.
   <p align="center">
     <img src="imgs/makeHuffmanTree.png">
   </p>
+  O último método chamado é o 'decompressFile' que é passado a árvore de Huffman criada anteriormente. Nele primeiro é perguntado os nomes dos arquivos compactado e do onde o texto descompactado vai ser salvo, depois estes arquivos são abertos com eles abertos do arquivo compactado é pego dois chars que são transformados em um array de bool que é utilizado para andar na árvore até achar um nó em que a palavra não seja ' ' e palavra no nó é adiconado no arquivo do texto descompactado, este processo é feito até que não seja possível pegar dois chars do arquivo compactado.
   <p align="center">
     <img src="imgs/decompressFile.png">
   </p>
 </p>
+
+# Resultados
 
 # Compilação e Execução
 
