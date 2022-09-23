@@ -133,10 +133,10 @@ void identificadores(Tree** t, std::deque<bool> array, Documento *doc) {
 void compressFile(Documento *doc, std::string nome_text) {
     std::fstream texto, compressed;
     int valor;
-    std::string palavras,linha, nome = "compressed.dat";
+    std::string palavras,linha, nome;
     Word w;
 
-    printf("\nQual o nome do arquivo onde sera comprimido o texto: ");
+    printf("\nQual o nome do arquivo onde sera comprimido o texto(com extensão, sendo extensão para arquivo binário com .dat ou .bin): ");
 	std::cin >> nome;
 
     compressed.open(nome, std::ios::out|std::ios::binary);
@@ -179,10 +179,10 @@ void decompressFile(Tree* raiz) {
     std::fstream compressed, decompressed;
     std::string nome_com, nome_dec;
 
-    printf("\nQual o nome do arquivo comprimido: ");
+    printf("\nQual o nome do arquivo comprimido(com extensão): ");
 	std::cin >> nome_com;
 
-    printf("\nQual o nome do arquivo onde sera descomprimido: ");
+    printf("\nQual o nome do arquivo onde sera descomprimido(com extensão): ");
 	std::cin >> nome_dec;
 
     compressed.open(nome_com, std::ios::in|std::ios::binary);

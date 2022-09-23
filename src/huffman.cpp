@@ -136,7 +136,7 @@ void createTreeFile(Tree *raiz) {
     std::fstream file;
     std::string nome;
 
-    printf("\nQual o nome do arquivo onde a arvore sera guardada: ");
+    printf("\nQual o nome do arquivo onde a arvore sera guardada(com extensão): ");
     std::cin >> nome;
 
 	file.open(nome, std::ios::out);
@@ -167,7 +167,7 @@ void getTreeFromFile(std::deque<Tree*> *arvores) {
     Record r;
     std::string nome;
 
-    printf("\nQual o nome do arquivo onde a arvore esta guardada: ");
+    printf("\nQual o nome do arquivo onde a arvore esta guardada(com extensão): ");
     std::cin >> nome;
 
     r.palavra = " ";
