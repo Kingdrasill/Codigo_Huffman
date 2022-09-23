@@ -3,7 +3,6 @@
 
 #include "listaPals.hpp"
 
-// Estrutura que guarda um documento
 struct Documento{
     List<Palavras> documento;
     std::string nome;
