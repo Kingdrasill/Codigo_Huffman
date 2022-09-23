@@ -108,6 +108,19 @@
 
 # Resultados
 
+<p align="justify">
+  Foram testados com os arquivos disponibilizados duas coisas quanto espaço é salvo e quanto tempo demora para compactar e descompactar um arquivo. Os resultados foram:
+  <ul>
+    <li>ti.txt: Era de 307KB deu um arquivo compactado de 88KB e um arquivo para árvore de 11KB, logo o espaço do compactdo inteiro é de 99KB que é 32,24% do espaço original. Os tempos foram de 68 ms para compactar e 40 ms para descompactar.</li><br>
+    <li>ti2.txt: Era de 307KB deu um arquivo compactado de 88KB e um arquivo para árvore de 11KB, logo o espaço do compactdo inteiro é de 99KB que é 32,24% do espaço original. Os tempos foram de 69 ms para compactar e 41 ms para descompactar.</li><br>
+    <li>filosofia.txt: Era de 377KB deu um arquivo compactado de 104KB e um arquivo para árvore de 45KB, logo o espaço do compactdo inteiro é de 149KB que é 39,52% do espaço original. Os tempos foram de 106 ms para compactar e 57 ms para descompactar.</li><br>
+    <li>filosofia2.txt: Era de 377KB deu um arquivo compactado de 104KB e um arquivo para árvore de 46KB, logo o espaço do compactdo inteiro é de 150KB que é 39,78% do espaço original. Os tempos foram de 98 ms para compactar e 58 ms para descompactar.</li><br>
+    <li>globalizacao.txt: Era de 300KB deu um arquivo compactado de 83KB e um arquivo para árvore de 11KB, logo o espaço do compactdo inteiro é de 94KB que é 31,33% do espaço original. Os tempos foram de 72 ms para compactar e 42 ms para descompactar.</li><br>
+    <li>politica.txt: Era de 304KB deu um arquivo compactado de 83KB e um arquivo para árvore de 11KB, logo o espaço do compactdo inteiro é de 94KB que é 30,92% do espaço original. Os tempos foram de 67 ms para compactar e 44 ms para descompactar.</li><br>
+  </ul>
+  A espaço final médio é de 34,34% do espaço do original e os tempos médios são 80 ms para compactar e 47 ms para descompactar.
+</p>
+
 # Compilação e Execução
 
 O código disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
