@@ -23,18 +23,17 @@ void createWordRank(List<Record> *rank, Documento *doc) {
     }
 }
 
-// Função para inserir uma palavra em uma lista de palavras
 void insertListaRankeamento(List<Record> *lista, Record r) {
 
-    if(lista->cabeca != lista->cauda)               // Caso a lista não esteja vazia
+    if(lista->cabeca != lista->cauda) 
     {
-        Block<Record>* tmp = new Block<Record>; // Novo elemento na lista
-        Block<Record>* aux;                                 // Variável auxiliar para andar na lista
+        Block<Record>* tmp = new Block<Record>;
+        Block<Record>* aux; 
 
         tmp->dado = r;
         aux = lista->cabeca;
-        while (aux->prox != nullptr && aux->prox->dado.RP < r.RP) {   // Achar a posição em que a nova palavra deve ser inserida, está posição
-            aux = aux->prox;                                                   // é em que o valor ASCii da palavra é maior do que o valor da palavra anterior
+        while (aux->prox != nullptr && aux->prox->dado.RP < r.RP) {
+            aux = aux->prox;
         }
         
         if(aux->prox == nullptr)
@@ -77,7 +76,7 @@ void insertListaRankeamento(List<Record> *lista, Record r) {
             }
         }
     } 
-    else {        // Caso a lista estiver vazia adionar a palavra de uma vez na lista
+    else { 
         lista->cauda->prox = new Block<Record>;
         lista->cauda = lista->cauda->prox;
         lista->cauda->dado = r;
